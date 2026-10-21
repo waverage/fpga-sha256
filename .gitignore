@@ -1,0 +1,21 @@
+# Vivado / Vitis build output. Keep sources only.
+vivado/
+vitis/
+*.jou
+*.log
+*.str
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/
+*.xsa
+*.bit
+*.ltx
+.Xil/
+# Icarus Verilog
+*.vvp
+*.vcd
