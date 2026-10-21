@@ -1,7 +1,7 @@
 /*
  * Bare-metal test program for the sha256_axi peripheral (Arty Z7-20, Zynq PS).
- * Replace the contents of helloworld.c in a Vitis "Hello World" application
- * with this file.
+ * In a Vitis "Hello World" application, delete helloworld.c and add this
+ * file next to platform.c (see README for the UserConfig.cmake fix).
  *
  * Type 4 characters in the serial terminal (115200 8N1). The PS packs them
  * into one 32-bit word, hands it to the FPGA core, waits for done and prints
