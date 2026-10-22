@@ -110,6 +110,18 @@ Expected output ends in `ALL PASS` and `AXI PASS`.
 6. Block design exported to `bd/system.tcl`. Done. Not yet tested by
    recreating a project from scratch with it.
 
+## Second project: HDMI live filter (2026-10-22)
+
+`video/hdmi_filter/`, fabric-only HDMI IN -> filter -> HDMI OUT at 720p60,
+working on the board. Everything is driven from Vivado batch mode
+(`build.tcl`, `board.tcl`); the owner does not want to open the Vivado or
+Vitis GUI, so keep new work scriptable. Digilent IP clone at
+`E:\amd\digilent-vivado-library`, project at `E:\amd\hdmi_filter`.
+Board status (HDMI lock, resolution, frame counter) is readable over JTAG
+through a VIO, which is how a session without a monitor checks the result.
+The SHA-256 app can be loaded the same way with xsdb (`fpga`, `ps7_init`,
+`dow`, `con`), serial console on COM8.
+
 ## Open loose ends
 
 - Test `bd/system.tcl` in a fresh project.

@@ -12,6 +12,8 @@ sim/sha256_tb.v      core testbench, 3 vectors, prints ALL PASS
 sim/sha256_axi_tb.v  bus-level testbench, drives the wrapper like the C code
 sw/main.c            bare-metal program for Vitis (replaces helloworld.c)
 bd/system.tcl        block design (Zynq PS + sha256_axi), from write_bd_tcl
+video/hdmi_filter/   second project: live HDMI in -> filter -> HDMI out,
+                     built and run from batch scripts (see its README)
 ```
 
 Simulated 2026-10-21 with Icarus Verilog 13 and Vivado 2026.1 XSim: both
