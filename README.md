@@ -14,6 +14,8 @@ sw/main.c            bare-metal program for Vitis (replaces helloworld.c)
 bd/system.tcl        block design (Zynq PS + sha256_axi), from write_bd_tcl
 video/hdmi_filter/   second project: live HDMI in -> filter -> HDMI out,
                      built and run from batch scripts (see its README)
+video/hog_detect/    third project: HOG person detector on the HDMI stream,
+                     green boxes around people, 720p60 (see its README)
 ```
 
 Simulated 2026-10-21 with Icarus Verilog 13 and Vivado 2026.1 XSim: both

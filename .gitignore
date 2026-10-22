@@ -19,3 +19,5 @@ vitis/
 # Icarus Verilog
 *.vvp
 *.vcd
+# Python
+__pycache__/

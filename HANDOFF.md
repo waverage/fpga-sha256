@@ -122,6 +122,18 @@ through a VIO, which is how a session without a monitor checks the result.
 The SHA-256 app can be loaded the same way with xsdb (`fpga`, `ps7_init`,
 `dow`, `con`), serial console on COM8.
 
+## Third project: HOG person detector (2026-10-23)
+
+`video/hog_detect/`, on top of the HDMI filter. OpenCV people-detector
+weights, single scale, fully pipelined in the fabric at 720p60. Verified
+bit-exact against `model/hog_fixed.py` in simulation and on the board.
+Workflow that worked: float model vs OpenCV -> fixed-point model -> RTL with
+the model as golden reference -> board, checked through the VIO. The PC is
+the HDMI source (second display), so tests can be driven with ffplay and
+checked by screenshot without the owner. Test data in `E:\amd\hog_data`.
+Ideas: a second scale (1.25 or 2), threshold on a switch, detection on the
+camera feed of a real room.
+
 ## Open loose ends
 
 - Test `bd/system.tcl` in a fresh project.
